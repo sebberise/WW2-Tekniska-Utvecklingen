@@ -279,6 +279,7 @@ body{
 	display: flex;
 	height: 88%;
 	align-items: center;
+	box-sizing: border-box;
 }
 
 @media (max-width: 720px){
@@ -298,6 +299,11 @@ body{
 
 .col{
 	flex-basis: 50%;
+	display: flex;
+	box-sizing: border-box;
+	flex-direction: row;
+	flex-wrap: wrap;
+	
 }
 
 h1 {
@@ -317,6 +323,7 @@ p{
 	 width: auto;
 	 margin: auto;
 	 margin-top: 9%;
+	 margin-left: 0;
 }
  a {
 	 text-transform: uppercase;
@@ -367,28 +374,24 @@ p{
 }
  
 
-
-
 .image-card{
 	width: 40%;
 	height: 32vh;
-	display: inline-block;
 	border-radius: 5%;
 	padding: 3% 5%;
-	box-sizing: border-box;
-	cursor: pointer;
 	margin: 2% 2%;
 	background-position: center;
 	background-size: cover;
-	transition: .5s;
+	box-sizing: border-box;
+	
 }
 
 @media (max-width: 700px){
 	.image-card{
-		height: 27vh;
+		height: 25vh;
 		border-radius: 13px;
 		margin-top: -20%;
-		margin-bottom: 20%;
+		margin-bottom: 25%;
 	}
 }
 
@@ -405,11 +408,7 @@ p{
 }
 
 .card4{
-	background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(luft.jpg);
-}
-
-.image-card:hover{
-	transform: translateY(-3%);
+	background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("land3.webp");
 }
 
 h5{
@@ -536,6 +535,10 @@ body{
 
   min-height: 100vh;
   background: #131313;
+}
+
+p a{
+	color: red;
 }
 
 .popup-container{
