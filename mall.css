@@ -292,7 +292,7 @@ body{
 		margin-top: 20%;
 	}
 	.col p{
-		font-size: 8px;
+		font-size: 10px;
 	}
 }
 
@@ -385,9 +385,10 @@ p{
 
 @media (max-width: 700px){
 	.image-card{
-		height: 20vh;
-		margin-bottom: 20%;
+		height: 22vh;
 		border-radius: 13px;
+		margin-top: -20%;
+		margin-bottom: 20%;
 	}
 }
 
