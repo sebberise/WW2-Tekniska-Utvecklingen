@@ -17,6 +17,20 @@ body{
 	margin: 0;
 	padding: 0;
 }
+
+.logo{
+	position: absolute;
+	width: 13%;
+	height: 18%;
+	padding: 1% 0 0 1%;
+}
+
+@media (max-width: 500px){
+	.logo{
+		display: none;
+	}
+}
+
  :root {
 	 --color-primary: #18181a;
 	 --color-secondary: #fff;
@@ -453,6 +467,12 @@ h5{
 	 transition: 0.64s ease-in-out;
 	 border-radius: 20px;
 	 
+}
+
+@media (max-width: 1200px){
+	.popup{
+		display: none;
+	}
 }
 
 .popup-inner img{
