@@ -23,6 +23,7 @@ body{
 	width: 13%;
 	height: 18%;
 	padding: 1% 0 0 1%;
+	animation-delay: 1.3s;
 }
 
 @media (max-width: 500px){
@@ -111,6 +112,7 @@ body{
 	 position: relative;
 	 transition: transform calc(var(--td) * 3) var(--te);
 	 width: 6vmin;
+	 animation-delay: 1.3s;
 }
 
 @media (max-width:500px){
@@ -281,7 +283,7 @@ body{
 .container{
 	width: 100%;
 	height: 100vh;
-	background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(background.jpg);
+	background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(background2.jpg);
 	background-position: center;
 	background-size: cover;
 	padding-left: 11%;
@@ -317,7 +319,7 @@ body{
 	box-sizing: border-box;
 	flex-direction: row;
 	flex-wrap: wrap;
-	
+	animation-delay: .5s;
 }
 
 h1 {
@@ -343,6 +345,7 @@ p{
 	 text-transform: uppercase;
 	 text-decoration: none;
 	 font-weight: 700;
+	
 	 
 }
  .knapp {
@@ -353,9 +356,11 @@ p{
 	 background: transparent;
 	 outline: none;
 	 font-size: 3.4vmin;
-	 color: #fff;
 	 z-index: 0;
+	 color: #fff;
 }
+
+
  .knapp::after, .knapp::before {
 	 content: "";
 	 position: absolute;
@@ -463,8 +468,7 @@ h5{
 	 max-height: 90vh;
 	 width: 60%;
 	 height: 80%;
-	 background-color: #333;
-	 transition: 0.64s ease-in-out;
+	 background-color: #333;	
 	 border-radius: 20px;
 	 
 }
