@@ -23,7 +23,6 @@ body{
 	width: 13%;
 	height: 18%;
 	padding: 1% 0 0 1%;
-	animation-delay: 1.3s;
 }
 
 @media (max-width: 500px){
@@ -112,7 +111,6 @@ body{
 	 position: relative;
 	 transition: transform calc(var(--td) * 3) var(--te);
 	 width: 6vmin;
-	 animation-delay: 1.3s;
 }
 
 @media (max-width:500px){
@@ -319,7 +317,6 @@ body{
 	box-sizing: border-box;
 	flex-direction: row;
 	flex-wrap: wrap;
-	animation-delay: .5s;
 }
 
 h1 {
