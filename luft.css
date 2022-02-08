@@ -287,6 +287,7 @@ body{
 	padding-left: 11%;
 	padding-right: 8%;
 	box-sizing: border-box;
+	background-attachment: fixed;
 }
 
 .row{
