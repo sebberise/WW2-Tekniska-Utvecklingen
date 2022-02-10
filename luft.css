@@ -295,6 +295,9 @@ body{
 	.col{
 		margin-top: 25%;
 	}
+	.col p{
+		font-size: 20px;
+	}
 }
 
 .col{
@@ -758,26 +761,33 @@ p a{
 
 }
 
-@media (max-width:500px){
-	svg text{
-		font-size: 6vmin;
-		letter-spacing: 3px;
-	}
-}
 
 svg text {
   letter-spacing: 15px;
   stroke: #fff;
-  font-size: 8vmin;
+  font-size: 13vmin;
   stroke-width: 1.5;
-  animation: textAnimate 5s infinite alternate;
+  animation: textAnimate 5s infinite alternate;  
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: 20vh;
+}
 
+@media (max-width:500px){
+	svg text{
+		display: none;
+	}
+	svg{
+		height: 0;
+	}
 }
 
 .undertext{
 	font-style: italic;
 	color: red;
 }
+
 
 @keyframes textAnimate {
   0% {
