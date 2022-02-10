@@ -1,21 +1,14 @@
-
- html, body {
-	 font-family: 'Raleway', sans-serif;
-	 font-size: 16px;
-}
-
-
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
-  font-family: 'Oswald', sans-serif;
 }
 
 body{
 	margin: 0;
 	padding: 0;
+	font-family: Garamond;
+	background: #131313;
 }
 
 .logo{
@@ -36,8 +29,6 @@ body{
 	 --color-secondary: #fff;
 	 --color-dark: red;
 	 --color-light: #f5f5f5;
-	 --font-family-primary: 'Roboto Mono', monospace;
-	 --font-family-secondary: 'Rubik Mono One', sans-serif;
 	 --td: 150ms;
 	 --te: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
@@ -189,7 +180,6 @@ body{
 	 z-index: 1;
 }
  .menu > .menu__item {
-	 font-family: var(--font-family-secondary);
 	 font-size: 10vmin;
 }
 
@@ -547,17 +537,6 @@ h5{
 
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
-*{
-  font-family: 'Poppins', sans-serif;
-}
-
-body{
-
-  min-height: 100vh;
-  background: #131313;
-}
 
 p a{
 	color: red;
