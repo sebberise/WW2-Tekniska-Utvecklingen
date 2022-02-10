@@ -343,49 +343,6 @@ body{
 	
 	 
 }
- .knapp {
-	 position: relative;
-	 letter-spacing: 0.38em;
-	 margin: 0 auto;
-	 padding: 1rem 2.5rem;
-	 background: transparent;
-	 outline: none;
-	 font-size: 3.4vmin;
-	 z-index: 0;
-	 color: #fff;
-}
-
-
- .knapp::after, .knapp::before {
-	 content: "";
-	 position: absolute;
-	 height: 100%;
-	 width: 50%;
-	 transform: skewX(30deg);
-	 transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	 z-index: -1;
-}
- .knapp::before {
-	 background-color: red;
-	 top: -1rem;
-	 left: 0rem;
-	 
-}
- .knapp::after {
-	 background-color: #333;
-	 top: 1rem;
-	 left: 8rem;
-}
- .knapp:hover::before, .knapp:hover::after {
-	 top: 0;
-	 transform: skewx(0deg);
-}
- .knapp:hover::after {
-	 left: 0rem;
-}
- .knapp:hover::before {
-	 left: 8.75rem;
-}
  
 
 .image-card{
@@ -483,7 +440,7 @@ h5{
 	top: 0;
 	border-radius: 20px 0 0 20px;
 	transition: opacity 0.75s ease-in-out;
-	opacity: 0;
+	opacity: 1;
 }
  .popup__photo {
 	 display: flex;
@@ -571,8 +528,14 @@ p a{
   height: 57vh;
   background: #232323;
   border-radius: 20px;
-  overflow: hidden;
+  overflow: hidden; 
+  border-style: solid;
+  border-color: darkred;
 
+}
+
+#card1, #card2, #card3{
+	margin-top: 5%;
 }
 
 .popup-container .card:before{
@@ -600,8 +563,30 @@ p a{
   font-weight: 800;
   font-style: italic;
   color: red;
-  opacity: .5;
+  transition: .5s;
+  opacity: .1;
 }
+/*
+.popup-container #card1:after{
+	content: 'Tank';
+}
+.popup-container #card2:after{
+	content: 'Bög';
+}
+.popup-container #card3:after{
+	content: 'Plan';
+}
+.popup-container #card4:after{
+	content: 'Homo';
+}
+.popup-container #card5:after{
+	content: 'Yeso';
+}
+.popup-container #card6:after{
+	content: 'Nomo';
+}
+
+*/
 
 .popup-container .card .imgBx{
   position: absolute;
@@ -710,7 +695,11 @@ p a{
 	flex-direction: row;
 	width: 100%;
 	flex-wrap: wrap;
-	height: 70vh;
+	height: 100%;
+	background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(luft.jpg);
+	background-size: cover;
+	background-attachment: fixed; 
+	background-repeat: no-repeat;
 }
 
 #card1{
@@ -727,18 +716,39 @@ p a{
 
 #card6{
 	margin-right: 7%;
+	margin-bottom: 5%;
 }
 
-.title{
-	text-align: center;
-	font-size: 3.7vmin;
-	color: red;
-	text-transform: uppercase;
-	margin: 5%;
-}
+
 
 .break {
   flex-basis: 100%;
   height: 10vh;
 }
  
+
+
+svg text {
+  letter-spacing: 15px;
+  stroke: #fff;
+  font-size: 8vmin;
+  stroke-width: 1.5;
+  animation: textAnimate 5s infinite alternate;
+
+}
+
+@keyframes textAnimate {
+  0% {
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset:  20%;
+    fill: hsla(0, 100%, 50%)
+
+  }
+  
+  100% {
+    stroke-dasharray: 50% 0;
+    stroke-dashoffstet: -20%;
+    fill: hsla(0, 100%, 50%)
+  }
+  
+}
