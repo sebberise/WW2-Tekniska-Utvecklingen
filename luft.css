@@ -303,6 +303,9 @@ body{
 	.col p{
 		font-size: 20px;
 	}
+	.container{
+		background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(luft-bg-liten.jpg);
+	}
 }
 
 .col{
