@@ -423,8 +423,6 @@ h5{
 	left: 0;
 	top: 0;
 	border-radius: 20px 0 0 20px;
-	transition: opacity 0.75s ease-in-out;
-	opacity: 1;
 }
 
 
@@ -554,7 +552,7 @@ p a{
   position: absolute;
   top: 30%;
   left: -20%;
-  font-size: 23vmin;
+  font-size: 24vmin;
   font-weight: 800;
   font-style: italic;
   color: red;
