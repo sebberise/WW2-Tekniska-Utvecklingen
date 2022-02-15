@@ -1,545 +1,98 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!doctype html>
+<html><head>
+<meta charset="UTF-8">
+<title>WW2 Teknisk Utveckling | Hem</title>
+<link href="mall.css" rel="stylesheet" type="text/css">
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link rel="icon" href="logo.png" type="image/icon type">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
 
-body{
-	margin: 0;
-	padding: 0;
-	font-family: Garamond;
-	background: #131313;
-}
-
-.logo{
-	position: absolute;
-	width: 13%;
-	height: 18%;
-	padding: 1% 0 0 1%;
-}
-
-@media (max-width: 500px){
-	.logo{
-		display: none;
-	}
-}
-
- :root {
-	 --color-primary: #18181a;
-	 --color-secondary: #fff;
-	 --color-dark: red;
-	 --color-light: #f5f5f5;
-	 --td: 150ms;
-	 --te: cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-
-.line{
-	color: red;
-}
-
- h1 {
-	 font-size: calc(1.5rem + 4vmin);
-	 font-weight: 700;
-	 margin-bottom: 2rem;
-}
- p {
-	 line-height: 1.4;
-}
- a {
-	 font-weight: 700;
-}
-
- .nav-main {
-	 align-items: center;
-	 display: flex;
-	 height: 100%;
-	 justify-content: center;
-	 left: -100%;
-	 position: fixed;
-	 transition: left 0s calc(var(--td) * 2), transform 0s calc(var(--td) * 2);
-	 width: 100%;
-	 z-index: 100;
-}
- .nav-main::before, .nav-main::after {
-	 content: '';
-	 background-color: var(--color-primary);
-	 height: 50%;
-	 left: 0;
-	 position: absolute;
-	 transform: translateX(-110%);
-	 transform-origin: 0 50%;
-	 transition: transform calc(var(--td) * 2) var(--td) var(--te);
-	 width: 100%;
-	 z-index: -100;
-}
- .nav-main::before {
-	 top: 0;
-}
- .nav-main::after {
-	 bottom: 0;
-}
- .nav-main .menu__item {
-	 opacity: 0;
-	 transform: translateX(-1rem);
-	 transition: opacity var(--td) var(--te), transform var(--td) var(--te);
-}
- [id="main-navigation-toggle"] {
-	 opacity: 0;
-	 position: fixed;
-	 top: -100%;
-}
- [id="main-navigation-toggle"] ~ label {
-	 cursor: pointer;
-	 position: fixed;
-	 right: 1rem;
-	 top: 1rem;
-	 z-index: 110;
-}
- [id="main-navigation-toggle"] ~ label span {
-	 display: block;
-	 height: 3vh;
-	 padding: 0.8rem;
-	 position: relative;
-	 transition: transform calc(var(--td) * 3) var(--te);
-	 width: 6vmin;
-}
-
-@media (max-width:500px){
-	[id="main-navigation-toggle"] ~ label span {
-	 width: 40px;
-}
-
-}
- [id="main-navigation-toggle"] ~ label span::before, [id="main-navigation-toggle"] ~ label span::after {
-	 background-color: var(--color-dark);
-	 bottom: 0;
-	 content: '';
-	 height: 4px;
-	 left: 0;
-	 margin: auto;
-	 position: absolute;
-	 right: 0;
-	 transition: transform calc(var(--td) * 3) var(--te);
-	 top: 0;
-	 width: calc(100% - 1rem);
-}
- [id="main-navigation-toggle"] ~ label span::before {
-	 transform: rotate(0) translateY(-100%);
-}
- [id="main-navigation-toggle"] ~ label span::after {
-	 transform: rotate(0) translateY(100%);
-}
- [id="main-navigation-toggle"]:checked ~ label span {
-	 transform: rotate(1turn);
-}
- [id="main-navigation-toggle"]:checked ~ label span::before {
-	 transform: rotate(45deg);
-}
- [id="main-navigation-toggle"]:checked ~ label span::after {
-	 transform: rotate(-45deg);
-}
- [id="main-navigation-toggle"]:checked ~ .nav-main {
-	 left: 0;
-	 transition: transform 0s;
-}
- [id="main-navigation-toggle"]:checked ~ .nav-main::before, [id="main-navigation-toggle"]:checked ~ .nav-main::after {
-	 transform: translateX(0);
-	 transition-delay: 0s;
-}
- [id="main-navigation-toggle"]:checked ~ .nav-main::after {
-	 transition-delay: calc(var(--td) / 2);
-}
- [id="main-navigation-toggle"]:checked ~ .nav-main .menu__item {
-	 opacity: 1;
-	 transform: translateX(0);
-	 transition: opacity calc(var(--td) * 2) var(--te), transform calc(var(--td) * 2) var(--te);
-}
- [id="main-navigation-toggle"]:checked ~ .nav-main .menu__item:nth-child(1) {
-	 transition-delay: calc(var(--td) * 2 * (1 * 0.25));
-	 z-index: -1;
-}
- [id="main-navigation-toggle"]:checked ~ .nav-main .menu__item:nth-child(2) {
-	 transition-delay: calc(var(--td) * 2 * (2 * 0.25));
-	 z-index: -2;
-}
- [id="main-navigation-toggle"]:checked ~ .nav-main .menu__item:nth-child(3) {
-	 transition-delay: calc(var(--td) * 2 * (3 * 0.25));
-	 z-index: -3;
-}
- [id="main-navigation-toggle"]:checked ~ .nav-main .menu__item:nth-child(4) {
-	 transition-delay: calc(var(--td) * 2 * (4 * 0.25));
-	 z-index: -4;
-}
- [id="main-navigation-toggle"]:checked ~ .nav-main .menu__item:nth-child(5) {
-	 transition-delay: calc(var(--td) * 2 * (5 * 0.25));
-	 z-index: -5;
-}
- .menu {
-	 position: relative;
-	 text-align: center;
-	 z-index: 1;
-}
- .menu > .menu__item {
-	 font-size: 10vmin;
-}
-
-
-
- .menu__item {
-	 display: block;
-	 position: relative;
-}
- .menu__item:hover .menu__link::before, .menu__item:hover .menu__link::after {
-	 animation: blink 1s var(--td) steps(1, end) forwards infinite;
-	 transform: translateX(calc(100% - 0.5rem));
-	 transition-duration: calc(var(--td) * 3);
-}
- .menu__item:hover .menu__link::after {
-	 transition-delay: calc(var(--td) / 2);
-}
- .menu__item:hover .submenu {
-	 opacity: 1;
-	 transform: translateY(0);
-	 transition: transform calc(var(--td) * 2) calc(var(--td) * 3) var(--te), opacity calc(var(--td) * 2) calc(var(--td) * 3) var(--te), visibility 0s calc(var(--td) * 3);
-	 visibility: visible;
-}
- .menu__link {
-	 color: #fff;
-	 display: inline-block;
-	 font-weight: normal;
-	 overflow: hidden;
-	 padding: 0.5rem 1rem 0.125rem;
-	 position: relative;
-	 text-decoration: none;
-	 transition: color var(--td) var(--te), opacity var(--td) var(--te), transform var(--td) var(--te);
-	 z-index: 1;
-}
- .menu__link::before, .menu__link::after {
-	 content: '';
-	 background-color: var(--color-light);
-	 height: 50%;
-	 left: 0;
-	 position: absolute;
-	 transform: translateX(-110%);
-	 transform-origin: 0 50%;
-	 transition: transform 0s var(--te);
-	 width: 100%;
-	 z-index: -1;
-}
- .menu__link::before {
-	 top: 0;
-}
- .menu__link::after {
-	 bottom: 0;
-}
- .menu:not(:focus-within):not(:hover) .menu__item .menu__link {
-	 opacity: 1;
-	 transform: translate(0, 0);
-}
- .menu__item {
-	 --pull: 30%;
-}
- .menu__item .menu__link {
-	 opacity: 0.25;
-	 transition-duration: calc(var(--td) * 3);
-	 transform: translate(0, calc(var(--pull) * -1));
-}
- .menu__item .submenu .menu__link {
-	 opacity: 1;
-}
- .menu__item:hover > .menu__link {
-	 color: red;
-	 opacity: 1;
-	 transform: translate(0, 0);
-}
- .menu__item:hover > .menu__link:hover {
-	 color: red;
-	 transition-delay: 0s;
-}
- .menu__item:hover ~ .menu__item > .menu__link {
-	 transition-duration: calc(var(--td) * 3);
-	 transform: translate(0, var(--pull));
-}
- @keyframes blink {
-	 50%, 100% {
-		 opacity: 0;
-	}
-}
- 
-
-
-.container{
-	width: 100%;
-	height: 100vh;
-	background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(background2.jpg);
-	background-position: center;
-	background-size: cover;
-	padding-left: 11%;
-	padding-right: 8%;
-	box-sizing: border-box;
-}
-
-.row{
-	display: flex;
-	height: 88%;
-	align-items: center;
-	box-sizing: border-box;
-}
-
-@media (max-width: 720px){
-	.row{
-		flex-direction: column;		
-	}
-	.knapp{
-		display: none;
-	}
-	.col{
-		margin-top: 20%;
-	}
-	.col p{
-		font-size: 10px;
-	}
-}
-
-.col{
-	flex-basis: 50%;
-	display: flex;
-	box-sizing: border-box;
-	flex-direction: row;
-	flex-wrap: wrap;
-	animation-delay: .25s;
-}
-
-h1 {
-	color: #fff;
-	font-size: 10vmin;
-}
-
-p{
-	color: #fff;
-	font-size: 1.5vmin;
-	line-height: 150%;
-}
-
-
-
- .button-container {
-	 width: auto;
-	 margin: auto;
-	 margin-top: 9%;
-	 margin-left: 0;
-}
- a {
-	 text-transform: uppercase;
-	 text-decoration: none;
-	 font-weight: 700;
+<body>
 	
-	 
-}
- .knapp {
-	 position: relative;
-	 letter-spacing: 0.38em;
-	 margin: 0 auto;
-	 padding: 1rem 2.5rem;
-	 background: transparent;
-	 outline: none;
-	 font-size: 3.4vmin;
-	 z-index: 0;
-	 color: #fff;
-}
+<a href="index.html"><img class="logo" src="logo.png"></a>
 
+<input type="checkbox" id="main-navigation-toggle" class="btn btn--close" title="Toggle main navigation" />
+<label for="main-navigation-toggle">
+  <span></span>
+</label>
 
- .knapp::after, .knapp::before {
-	 content: "";
-	 position: absolute;
-	 height: 100%;
-	 width: 50%;
-	 transform: skewX(30deg);
-	 transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	 z-index: -1;
-}
- .knapp::before {
-	 background-color: red;
-	 top: -1rem;
-	 left: 0rem;
-	 
-}
- .knapp::after {
-	 background-color: #333;
-	 top: 1rem;
-	 left: 8rem;
-}
- .knapp:hover::before, .knapp:hover::after {
-	 top: 0;
-	 transform: skewx(0deg);
-}
- .knapp:hover::after {
-	 left: 0rem;
-}
- .knapp:hover::before {
-	 left: 8.75rem;
-}
- 
-
-.image-card{
-	width: 40%;
-	height: 32vh;
-	border-radius: 5%;
-	padding: 3% 5%;
-	margin: 2% 2%;
-	background-position: center;
-	background-size: cover;
-	box-sizing: border-box;
+<nav id="main-navigation" class="nav-main">
+  <ul class="menu">
+    <li class="menu__item">
+      <a class="menu__link" href="index.html">Hem</a>
+    </li>
+    <li class="menu__item">
+      <a class="menu__link" href="luft.html">Luft</a>
+    </li>
+  <li class="menu__item">
+      <a class="menu__link" href="land.html">Land</a>   
+    </li>
+  <li class="menu__item">
+      <a class="menu__link" href="hav.html">Hav</a>
+    </li>
+  </ul>
+</nav>	
 	
-}
+	<div class="container">
+	
+		<div class="row animate__animated animate__zoomIn">
+			<div class="col">
+				<h1>WWII <span class="line">-</span> Teknisk Utveckling</h1>
+				<p>Andra världskriget (1939<span class="line"> - </span>45) är den hittills mest omfattande och blodigaste konflikten i människans historia. Under kriget miste mellan 50 och 60 miljoner livet, varav ca 13 miljoner i förintelsen. Själva kriget, utspelade sig runt om i hela världen och omfattade både små och stora konflikter. En avgörande faktor kring om man var framgångsrik på slagfältet, var den tekniska utrustningen man hade tillgång till.<br><br> Här kan du läsa lite om den tekniska utvecklingen som krigsföring på hav, luft och land fick under andra världskriget...</p>
+				<div class="button-container"><a class="knapp" href="#popup">Läs Mer</a></div>
+			</div>
+			<div class="col">
+				<div class="image-card card4">
+					<h5>Bakgrund</h5>
+					<p>Andra världskriget (1939<span class="line"> - </span>45) är den hittills mest omfattande och blodigaste konflikten i människans historia där den tekniska utrustningen var en avgörande faktor för ländernas framgång. <a href="#popup">Läs mer</a></p>
+				</div>
+				<div class="image-card card1">
+					<h5>Luft</h5>
+					<p>Andra världskriget såg ett stort steg i effektiviteten av militära flygplan. Teknikens framsteg möjliggjorde större, snabbare och mer kapabla konstruktioner. <a href="luft.html">Läs mer</a></p>
+				</div>
+				<div class="image-card card2">
+					<h5>Land</h5>
+					<p>Största mängden soldater miste livet under landkrigföringen under andra världskriget. Det kom att bli ett avgörande koncept för att tjäna mark. <a href="land.html">Läs mer</a></p>
+				</div>
+				<div class="image-card card3">
+					<h5>Hav</h5>
+					<p>Tidigt under andra världskriget blev hangarfartyget det primära instrumentet för att leverera sjöstridskraft. Anledningen var räckvidd: flygplan kunde leverera en samlad attack på 320 km eller mer, till skillnad från fartygen. <a href="hav.html">Läs mer</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
 
-@media (max-width: 700px){
-	.image-card{
-		height: 25vh;
-		border-radius: 13px;
-		margin-top: -20%;
-		margin-bottom: 25%;
-	}
-}
+	
+<div class="popup-container">  
+  <div class="popup" id="popup">
+    <div class="popup-inner">
+		<img src="luft.jpg">
+		<img src="hav.jpg">
+		<img src="land.jpg">
+      <div class="popup__photo">
+      </div>
+      <div class="popup__text">
+        <h1>Bakgrund</h1>
+        <p>Denna hemsidan lär dig om den tekniska utvecklingen inom krigsföring under andra världskriget. Därmed, allt från vapen på land, luft och havet.<br><br>  
 
-.card1{
-	background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(luft.jpg);
-}
+		Andra världskriget (1939<span class="line"> - </span>45) är den hittills mest omfattande och blodigaste konflikten i människans historia. Under kriget miste mellan 50 och 60 miljoner livet, varav ca 13 miljoner i förintelsen. Själva kriget, utspelade sig runt om i hela världen och omfattade både små och stora konflikter. En avgörande faktor kring om man var framgångsrik på slagfältet, var den tekniska utrustningen man hade tillgång till.<br><br> 
 
-.card2{
-	background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(land.jpg);
-}
+		Lika länge som det har funnits människor har det funnits vapen av olika former. Senast för 200 år sedan under 1800-talet, i samband med den industriella revolutionen, utvecklades nya vapen i takt med andra tekniska framsteg, varav framsteg som lade grunden för den summa människor som miste livet under andra världskriget. De mynningsladdade handledsvapnen byttes ut mot vapen med magasin som laddades om genom mantelrörelse (en repeterfunktion). De helautomatiska vapnen, så som maskingevär, som skjuter en serie skott utan avbrott, började alltmer dyka upp under senare delen av 1800-talet och hade dessutom en avgörande roll under andra världskriget. Men den vapentekniska utvecklingen under industriella revolutionen, kom inte att vara i närheten av den utveckling som andra världskriget orsakade. Helt nya vapen såg dagens ljus då de krigande länderna lade enorma resurser och allt sitt tekniska kunnande för att få fram vapen med största möjliga dödlig effekt, på såväl, land, som hav och luften.<br><br>  
 
-.card3{
-	background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(hav.jpg);
-}
-
-.card4{
-	background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("land3.webp");
-}
-
-h5{
-	color: red;
-	text-shadow: 0 0 5px #999;
-	font-size: 2.5vmin;
-}
-
-.image-card p{
-	text-shadow: 0 0 15px #000;
-	font-size: 1.6vmin;
-}
-
-
- .popup {
-	 display: flex;
-	 align-items: center;
-	 justify-content: center;
-	 position: fixed;
-	 width: 100vw;
-	 height: 100vh;
-	 bottom: 0;
-	 right: 0;
-	 background-color: rgba(0, 0, 0, .80);
-	 z-index: 50;
-	 visibility: hidden;
-	 opacity: 0;
-	 overflow: hiden;
-	 transition: 0.64s ease-in-out;
-}
- .popup-inner {
-	 position: relative;
-	 bottom: -100vw;
-	 right: -100vh;
-	 display: flex;
-	 align-items: center;
-	 max-width: 60%;
-	 max-height: 90vh;
-	 width: 60%;
-	 height: 80%;
-	 background-color: #333;	
-	 border-radius: 20px;
-	 
-}
-
-@media (max-width: 1200px){
-	.popup{
-		display: none;
-	}
-}
-
-.popup-inner img{
-	position: absolute;
-	z-index: 2000;
-	width: 40%;
-	height: 100%;
-	left: 0;
-	top: 0;
-	border-radius: 20px 0 0 20px;
-	transition: opacity 0.75s ease-in-out;
-	opacity: 0;
-}
- .popup__photo {
-	 display: flex;
-	 justify-content: flex-start;
-	 align-items: flex-start;
-	 width: 40%;
-	 height: 100%;
-	 overflow: hidden;
-}
-
- .popup__text {
-	 display: flex;
-	 flex-direction: column;
-	 justify-content: center;
-	 width: 60%;
-	 height: 100%;
-	 padding: 4rem;
-
-}
- .popup__text h1 {
-	 font-size: 4vmin;
-	 font-weight: 600;
-	 margin-bottom: 2rem;
-	 text-transform: uppercase;
-	 color: red;
-	 text-align: center;
-}
- .popup__text p {
-	 font-size: 1.4vmin;
-	 color: #fff;
-	 line-height: 1.5;
-}
- .popup:target {
-	 visibility: visible;
-	 opacity: 1;
-}
- .popup:target .popup-inner {
-	 bottom: 0;
-	 right: 0;
-}
- .popup__close {
-	 position: absolute;
-	 right: -1rem;
-	 top: -1rem;
-	 width: 3rem;
-	 height: 3rem;
-	 font-size: 2rem;
-	 font-weight: 300;
-	 border-radius: 100%;
-	 background-color: #222;
-	 z-index: 4;
-	 color: red;
-	 line-height: 3rem;
-	 text-align: center;
-	 cursor: pointer;
-	 text-decoration: none;
-	 font-family: sans-serif;
-}
- 
+		Här kan du läsa lite om den tekniska utvecklingen som krigsföring på hav, luft och land fick under andra världskriget. </p>
+      </div>
+      <a class="popup__close" href="#">X</a>
+    </div>
+  </div>
 
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+	</div>
+	<script src="myScript.js"></script>
 
-p a{
-	color: red;
-}
+	
+</body>
+</html>
