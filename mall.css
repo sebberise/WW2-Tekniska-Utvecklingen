@@ -5,12 +5,12 @@
   padding: 0;
   box-sizing: border-box;
 }
-/*
+
 @font-face{
 	font-family: 'krigsfont';
 	src:url(font5.ttf) format('truetype');
 }
-
+/*
 @font-face{
 	font-family: 'krigsfont2';
 	src:url(font3.ttf) format('truetype');
@@ -199,6 +199,7 @@ body{
 }
  .menu > .menu__item {
 	 font-size: 12vmin;
+	 font-family: 'krigsfont';
 }
 
 
@@ -330,8 +331,9 @@ body{
 
 h1 {
 	color: #fff;
-	font-size: 10vmin;
+	font-size: 10.2vmin;
 	text-align: center;
+	
 }
 
 p{
