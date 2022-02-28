@@ -11,8 +11,13 @@ html{
 body{
 	margin: 0;
 	padding: 0;
-	font-family: Garamond;
+	font-family: 'Garamond';
 	background: #131313;
+}
+
+@font-face{
+	font-family: 'krigsfont';
+	src:url(font5.ttf) format('truetype');
 }
 
 .logo{
@@ -186,7 +191,8 @@ body{
 	 z-index: 1;
 }
  .menu > .menu__item {
-	 font-size: 10vmin;
+	 font-size: 12vmin;
+	 font-family: 'krigsfont';
 }
 
 
