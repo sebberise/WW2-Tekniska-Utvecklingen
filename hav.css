@@ -288,6 +288,11 @@ body{
 	box-sizing: border-box;
 	background-attachment: fixed;
 }
+@media (max-width: 500px){
+	.container{
+		background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(mobil-hav.png);
+	}
+}
 
 .row{
 	display: flex;
@@ -306,11 +311,9 @@ body{
 		margin-top: 25%;
 	}
 	.col p{
-		font-size: 20px;
+		font-size: 25px;
 	}
-	.container{
-		background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(hav-bg.jpg);
-	}
+	
 }
 
 .col{
@@ -458,7 +461,7 @@ h5{
 	 text-align: center;
 }
  .popup__text p {
-	 font-size: 1.9vmin;
+	 font-size: 2vmin;
 	 color: #fff;
 	 line-height: 1.5;
 }
