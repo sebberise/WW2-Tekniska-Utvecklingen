@@ -291,8 +291,7 @@ body{
 
 @media (max-width: 500px){
 	.container{
-		background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(mobil-luft.jpg);
-		background-size: contain;
+		background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(mobil-luft.jpg);
 	}
 }
 
@@ -734,7 +733,7 @@ p a{
 
 @media (max-width: 500px){
 	.cards-container{
-		background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(mobil-luft.jpg);
+		background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(mobil-luft.jpg);
 	}
 }
 
