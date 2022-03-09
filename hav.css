@@ -461,11 +461,16 @@ h5{
 	 text-align: center;
 }
  .popup__text p {
-	 font-size: 2vmin;
+	 font-size: 2.15vmin;
 	 color: #fff;
 	 line-height: 1.5;
 }
 
+@media (max-width:500px){
+	#card4, #card5, #card6, #card7, #card8, #card9{
+		margin-top: 5%;
+	}
+}
 
  .popup:target {
 	 visibility: visible;
