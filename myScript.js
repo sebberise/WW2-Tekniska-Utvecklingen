@@ -1,6 +1,6 @@
 const slideshowImages = document.querySelectorAll(".popup-inner img");
 
-const nextImageDelay = 7000;
+const nextImageDelay = 6000;
 let currentImageCounter = 0; // setting a variable to keep track of the current image (slide)
 
 // slideshowImages[currentImageCounter].style.display = "block";
