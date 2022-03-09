@@ -472,7 +472,7 @@ h5{
 }
 
  .popup__text h1 {
-	 font-size: 4vmin;
+	 font-size: 4.3vmin;
 	 font-weight: 600;
 	 margin-bottom: 2rem;
 	 text-transform: uppercase;
@@ -480,7 +480,7 @@ h5{
 	 text-align: center;
 }
  .popup__text p {
-	 font-size: 2vmin;
+	 font-size: 2.2vmin;
 	 color: #fff;
 	 line-height: 1.5;
 }
@@ -561,8 +561,14 @@ p a{
   margin: 5% auto;
 }
 
-#card4, #card5, #card6{
+#card4, #card2, #card6, #card7, #card8, #card9{
 	margin-top: -5%;
+}
+
+@media (max-width:500px){
+	#card4, #card2, #card6, #card7, #card8, #card9{
+		margin-top: 5%;
+	}
 }
 
 .popup-container .card:before{
